@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 1.04 | SAÉ 1.05</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 1.04 | SAÉ 1.05 – Apprendre en situation la production de données en entreprise | Présentation en anglais d’un territoire économique et culturel</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_104-105/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_104-105/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_104-105/preuve_3.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_104-105/preuve_4.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_104-105/preuve_5.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_104-105/preuve_6.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette diapositive présente le <b>produit Muscadet</b> en mettant en avant son cépage principal (<i>Melon de Bourgogne</i>) et ses caractéristiques essentielles (vin blanc sec, accord mets-vins avec les fruits de mer).<br><br>
+                        J’ai sélectionné ces informations pour <b>adapter ma présentation au public visé</b>, en contextualisant le produit dans un cadre marketing et culturel.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.02</b>, car j’ai su <b>contextualiser les données</b> et choisir les éléments les plus significatifs pour valoriser le produit à l’oral.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette diapositive présente le <b>positionnement du Muscadet à l’international</b>, en soulignant la particularité de son cépage, l’absence d’exportation significative vers la Chine, et sa réputation croissante en France. Elle est accompagnée d’un <b>graphique en secteurs</b> illustrant les principaux pays exportateurs de vin vers la Chine en 2021.<br><br>
+                        J’ai sélectionné ces données et conçu la diapositive de façon à <b>contextualiser le produit</b> dans un environnement économique international et à <b>mettre en évidence les résultats clés</b> : la faible présence du Muscadet en Chine et les volumes d’exportation par pays.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.02</b>, car j’ai su <b>relier les données économiques du marché chinois</b>. Elle montre également que j’ai acquis la compétence <b>AC 13.03</b>, car j’ai <b>sélectionné et valorisé les indicateurs les plus pertinents</b> pour appuyer l’analyse du positionnement à l’international.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette diapositive montre l’<b>évolution des importations de vin en Chine</b> entre 2017 et 2023, à travers un graphique en ligne clair et lisible. J’ai accompagné ce graphique avec un texte décrivant la baisse progressive des importations depuis le pic atteint en 2017, ainsi qu’une prévision d’augmentation de 19 % qui était prévue début 2024.<br><br>
+                        J’ai structuré les informations pour <b>mettre en contexte les données économiques</b> et faciliter leur interprétation par le public visé.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.02</b>, car j’ai su <b>relier les données économiques à un contexte temporel et sectoriel</b> (marché du vin en Chine). Elle montre également que j’ai acquis la compétence <b>AC 13.03</b>, car j’ai <b>sélectionné et mis en avant des résultats clés</b> à l’aide d’un graphique.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette diapositive décrit le <b>marché chinois des produits de la mer</b>, en mettant en évidence sa part importante de la consommation mondiale (1/3) et sa croissance continue (322 milliards de ¥ en 2020). J’ai également inséré un <b>graphique en secteurs</b> afin de mettre en avant la répartition de la consommation mondiale de fruits de mer.<br><br>
+                        J’ai conçu cette présentation pour <b>contextualiser le marché chinois</b> et souligner les tendances clés (croissance, forte demande), tout en fournissant des données comparatives avec d’autres pays.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.02</b>, car j’ai su <b>relier les données économiques du marché chinois</b>. Elle montre également que j’ai acquis la compétence <b>AC 13.03</b>, car j’ai <b>sélectionné et valorisé des indicateurs pertinents</b> pour appuyer mes analyses.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce graphique présente l’<b>évolution du bénéfice net de l’entreprise</b> que j'ai choisie de représenter, entre 2015 et 2023. Il illustre les variations importantes (pics et baisses), permettant de visualiser rapidement les périodes de profit et de perte.<br><br>
+                        J’ai conçu ce graphique pour <b>mettre en évidence les tendances clés</b> et faciliter la lecture des données économiques, en sélectionnant une représentation claire et pertinente.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.03</b>, car j’ai su <b>sélectionner un indicateur pertinent</b> (le bénéfice net) et le représenter graphiquement pour aider à la compréhension.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce texte complète le graphique précédent en présentant une <b>analyse chronologique des bénéfices nets de l’entreprise</b> de 2015 à 2023. J’y détaille les principales évolutions en utilisant des termes précis comme <i>increased dramatically</i> ou <i>record profit</i> pour qualifier les tendances observées.<br><br>
+                        Cette preuve montre que j’ai su <b>contextualiser les données économiques</b> pour donner du sens aux chiffres présentés et les relier à des événements concrets comme le Covid-19 ou le changement climatique.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.02</b>, car j’ai su <b>expliquer les évolutions des données</b> en fonction des événements économiques. Elle montre également que j’ai acquis la compétence <b>AC 13.03</b>, car j’ai <b>mis en évidence les résultats clés</b> grâce à une explication détaillée et progressive des variations du bénéfice net. Enfin, elle valide la compétence <b>AC 13.06</b>, car j’ai utilisé une <b>expression précise</b> en anglais pour décrire les résultats de manière professionnelle.
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>Excel</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans ces SAÉ combinées, je me suis mis dans la posture d’un chargé d’étude économique. Mon objectif était de rechercher, analyser et valoriser des données issues de l’environnement socio-économique, tout en étant capable de présenter les résultats obtenus en anglais de manière claire et professionnelle.</p>
+                        <p>J’ai mobilisé les ressources <i>anglais de spécialité</i> (R1.07), <i>communication professionnelle</i> (R1.08) et <i>découverte des données de l’environnement entrepreneurial et économique</i> (R1.09) pour rechercher des informations pertinentes, structurer mes analyses et présenter mes résultats de manière claire en anglais.</p>
+                        <p>J’ai identifié des sources ouvertes (comme l’INSEE ou data.gouv.fr), extrait des indicateurs économiques clés d’un territoire, puis construit une synthèse des résultats à l'aide de graphiques. J’ai ensuite rédigé et présenté ces informations en anglais, en utilisant le vocabulaire professionnel adapté.</p>
+                        <p>J’ai appris à contextualiser les données dans un cadre socio-économique réel, à dégager les indicateurs les plus pertinents, à expliquer ma démarche d’analyse et à restituer mes résultats de manière claire, structurée et bilingue.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 13.02 |</span>Identifier l’importance de contextualiser ses données<br>
+                            <i>J’ai su présenter le domaine d'activité de l'entreprise dans un contexte économique, pour donner du sens aux chiffres présentés et faciliter leur interprétation.</i><br><br>
+
+                            <span>— AC 13.03 |</span>Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents<br>
+                            <i>J’ai mis en évidence les résultats clés à travers des termes précis et des graphiques pour permettre une lecture rapide des tendances.</i><br><br>
+
+                            <span>— AC 13.06 |</span>Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats<br>
+                            <i>J’ai utilisé une expression professionnelle, en anglais, pour expliquer les évolutions des données économiques.</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 1.02</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 1.02 – Écriture et lecture de fichiers de données</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_102/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_102/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_102/preuve_3.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette capture d’écran montre le <b>script Python</b> développé pour traiter automatiquement un <b>fichier texte brut</b>. Il lit chaque ligne, extrait les <b>noms de colonnes</b> et les <b>modalités de Code produit</b>, puis construit dynamiquement une <b>liste complète d’en-têtes</b> insérée dans le fichier cible.<br><br>
+                        J’ai structuré ce programme avec des <b>boucles</b>, <b>conditions</b> et <b>structures de données</b> adaptées comme les listes et les ensembles (<code>set()</code>), en ajoutant quelques <b>commentaires</b> pour expliquer le traitement. Le code utilise des fonctions intégrées comme <code>split()</code>, <code>append()</code> ou encore <code>write()</code>, typiques de la manipulation de fichiers et de chaînes de caractères en Python.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 11.02</b>, grâce au <b>respect des formalismes de notation</b> : nommage explicite des variables, indentation claire et commentaires. Elle montre aussi que j’ai acquis <b>AC 11.03</b>, car j’ai <b>utilisé la syntaxe du langage Python</b> de manière rigoureuse pour manipuler, transformer et écrire les données. Enfin, elle valide <b>AC 11.05</b>, car j’ai su <b>utiliser correctement les structures algorithmiques de base</b> pour construire une solution efficace et lisible.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette image illustre le <b>fichier CSV généré</b> à l’aide du script. On y voit que les <b>données sources ont été réorganisées</b> selon les modalités extraites, et enrichies avec une <b>colonne "prix Total"</b> calculée automatiquement.<br><br>
+                        J’ai veillé à ce que le fichier respecte <b>l’ordre des colonnes</b> attendu, à <b>vérifier l’intégrité des données</b> et à <b>produire un résultat exploitable</b> sans erreur de format.<br><br>
+                        Cette preuve montre que j’ai acquis la compétence <b>AC 11.01</b>, car j’ai su <b>traduire un besoin exprimé par le commanditaire en une solution technique fiable</b>, conforme aux attentes. Elle démontre aussi que j’ai acquis <b>AC 11.04</b>, car j’ai <b>analysé la structure des données</b> pour adapter correctement les colonnes du fichier cible et garantir une organisation cohérente des informations.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce <b>graphique</b> présente la <b>moyenne des montants des commandes</b> pour chaque département de Bretagne, à partir des données traitées dans le fichier généré. Il repose sur l’exploitation de la <b>colonne "prix Total"</b> ajoutée automatiquement par le script.<br><br>
+                        J’ai réalisé un <b>traitement statistique simple</b> et conçu une <b>visualisation claire et lisible</b> pour comparer les départements entre eux, afin de mettre en évidence les écarts de budget.<br><br>
+                        Cette preuve valide la compétence <b>AC 11.06</b>, car elle illustre que j’ai <b>compris l’intérêt de la programmation</b> pour automatiser la création de données exploitables dans un but d’analyse.
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2024</div>
+                        <h4>Python</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans cette SAÉ, je me suis mis dans la posture d’un consultant en intégration de données. Ma mission était de concevoir un programme capable de lire, transformer et réécrire des fichiers de données, en respectant un format cible imposé. Ce type de travail est essentiel dans les processus de migration ou d’échange entre systèmes d’information.</p>
+                        <p>J’ai mobilisé les ressources <i>bases de la programmation 1</i> (R1.03) pour concevoir un script structuré respectant les logiques de lecture et de transformation de fichiers.</p>
+                        <p>J’ai développé un script Python capable de lire un fichier source (.txt), de transformer les données selon les spécifications fournies (nettoyage, renommage de colonnes, reformatage des types), puis de les exporter dans un fichier conforme au format attendu. J’ai respecté les contraintes du sujet, notamment en assurant la cohérence des transformations, en documentant chaque étape du traitement et en structurant le code de façon claire et réutilisable.</p>
+                        <p>J’ai appris à interpréter un sujet technique, à structurer un programme simple mais fiable, à respecter des spécifications précises pour garantir la compatibilité des fichiers produits, à vérifier la cohérence des données transformées, et à documenter mon travail de manière claire pour en faciliter la compréhension et la réutilisation.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 11.01 |</span>Correctement interpréter et prendre en compte le besoin du commanditaire ou du client<br>
+                            <i>J’ai su comprendre les spécifications de traitement des données (lecture, transformation, écriture) pour concevoir un script conforme aux attentes tout en garantissant la validité des fichiers générés.</i><br><br>
+
+                            <span>— AC 11.02 |</span>Respecter les formalismes de notation<br>
+                            <i>Mon code respecte les bonnes pratiques de lisibilité : commentaires clairs, indentation cohérente, noms de variables explicites, afin de faciliter sa compréhension.</i><br><br>
+
+                            <span>— AC 11.03 |</span>Connaître la syntaxe des langages et savoir l’utiliser<br>
+                            <i>J’ai utilisé efficacement la syntaxe Python (fichiers, conditions, boucles, listes, sets, chaînes) pour manipuler les données sans erreurs ni comportements inattendus.</i><br><br>
+
+                            <span>— AC 11.04 |</span>Mesurer l’importance de maîtriser la structure des données à exploiter<br>
+                            <i>J’ai identifié et extrait les champs pertinents du fichier source, organisé dynamiquement les intitulés, et respecté la structure du fichier cible exigée.</i><br><br>
+
+                            <span>— AC 11.05 |</span>Comprendre les structures algorithmiques de base et leur contexte d’usage<br>
+                            <i>Le script repose sur des boucles et des conditions, utilisées pour parcourir les fichiers et répondre aux exigences fonctionnelles.</i><br><br>
+
+                            <span>— AC 11.06 |</span>Prendre conscience de l’intérêt de la programmation<br>
+                            <i>Ce projet m’a montré que l’automatisation à l'aide d'un script permet de fiabiliser les traitements et d’enchaîner des analyses exploitables très rapidement, notamment via des exports.</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 1.06</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 1.06 – Mise en oeuvre d'une enquête</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_106/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_106/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_106/preuve_3.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_106/preuve_4.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_106/preuve_5.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette capture d’écran montre l’<b>introduction de l’enquête</b> réalisée pour analyser l’image et l’influence du CPIE de Belle-Île-en-Mer auprès des résidents. Elle présente le <b>contexte</b> de l’étude, les <b>objectifs de l’enquête</b> et la <b>méthodologie d’échantillonnage</b> (habitants permanents, résidents secondaires et visiteurs).<br><br>
+                        J’ai rédigé ce texte en soignant la <b>structure des paragraphes</b> et en utilisant des <b>termes précis</b>, afin de <b>faciliter la compréhension</b> et de <b>mettre en contexte la démarche</b> pour le lecteur.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.02</b>, car j’ai su <b>relier les données collectées à un contexte local pertinent</b> et présenter les objectifs de façon claire. Elle prouve également que j’ai acquis la compétence <b>AC 13.06</b>, car j’ai utilisé une <b>expression précise et nuancée</b> pour expliquer la démarche, rendant la lecture accessible et professionnelle.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran illustre une <b>question de l’enquête</b> réalisée auprès des habitants de Belle-Île-en-Mer pour mesurer leur perception du CPIE. La question « Pour vous, le CPIE c’est : » propose quatre réponses fermées, permettant d’évaluer le <b>niveau de connaissance et de compréhension de l'association</b>.<br><br>
+                        J’ai conçu cette question pour <b>contextualiser la perception des habitants</b> et mieux comprendre leur représentation du CPIE, afin d'adapter la communication et les actions de sensibilisation.<br><br>
+                        ette preuve démontre que j’ai acquis la compétence <b>AC 13.06</b>, car j’ai rédigé la question de façon <b>claire et accessible</b> pour garantir une réponse pertinente et exploitable. Elle valide également la compétence <b>AC 13.01</b>, car j’ai su <b>anticiper et limiter les biais possibles</b> (ex. formulation neutre, choix de réponses équilibré) pour améliorer la fiabilité des résultats.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce <b>graphique en secteurs</b> présente la <b>répartition des individus par tranche d’âge</b> recueillie lors de l’enquête sur la perception du CPIE à Belle-Île-en-Mer. Les tranches sont distinguées par des couleurs pour faciliter la lecture : moins de 18 ans, entre 18 et 29 ans, entre 30 et 59 ans et plus de 60 ans.<br><br>
+                        J’ai conçu ce graphique pour <b>contextualiser les données démographiques</b> et identifier les publics cibles dans la communication du CPIE. Cette représentation permet de <b>mettre en évidence la tranche d’âge la plus représentée</b> et d’adapter les stratégies de communication en conséquence.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.01</b>, car j’ai su <b>anticiper et limiter les biais</b> liés à la visualisation des données (choix des couleurs, lisibilité). Elle valide également la compétence <b>AC 13.02</b>, car j’ai su <b>relier les données collectées à un contexte pertinent</b> pour répondre aux besoins du projet. Enfin, elle valide la compétence <b>AC 13.05</b>, car j’ai compris <b>l’intérêt d’utiliser un graphique clair et lisible</b> pour faciliter la compréhension et la communication des résultats.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce <b>graphique en barres empilées</b> présente la <b>répartition des individus selon leur connaissance du CPIE et leur tranche d’âge</b>. Il montre les proportions de personnes connaissant le CPIE (« Oui »), celles qui connaissent « de nom seulement » et celles qui ne le connaissent pas (« Non »), réparties par classes d’âge (moins de 18 ans, entre 18 et 29 ans, entre 30 et 59 ans, plus de 60 ans).<br><br>
+                        J’ai sélectionné ce graphique pour <b>mettre en contexte la connaissance du CPIE au sein de la population étudiée</b> et identifier les classes d’âge où la réputation est plus faible. Cette représentation visuelle permet de <b>mettre en évidence les résultats</b> afin de comparer les tranches d’âge entre elles.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.01</b>, car j’ai su <b>prendre en compte les biais possibles</b> dans la restitution des résultats (par exemple, la surestimation ou la sous-estimation d’une catégorie). Elle valide également la compétence <b>AC 13.02</b>, car j’ai <b>contextualisé les données selon un critère pertinent</b> pour analyser la notoriété du CPIE. Enfin, elle valide la compétence <b>AC 13.05</b>, car j’ai compris <b>l’intérêt d’utiliser la data visualisation</b> pour rendre les résultats plus lisibles et exploitables.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce texte constitue la <b>conclusion de l'étude</b> menée sur la perception et l'influence du CPIE de Belle-Île-en-Mer auprès des habitants. Il synthétise les résultats obtenus et met en avant les points clés : la connaissance du CPIE varie selon les classes d'âge, la perception générale est favorable mais perfectible, et des recommandations sont formulées pour améliorer la visibilité de l'association.<br><br>
+                        J'ai rédigé cette conclusion en utilisant une <b>expression claire</b>, afin de rendre les résultats plus accessibles et compréhensifs. J'ai veillé à <b>contextualiser les données</b> en les reliant aux objectifs stratégiques du CPIE et en proposant des recommandations pratiques pour renforcer son impact sur le territoire.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 13.02</b>, car j’ai su <b>relier les résultats de l’enquête aux enjeux réels</b> du CPIE et expliquer comment ils pouvaient être exploités. Elle valide également la compétence <b>AC 13.06</b>, car j’ai utilisé une <b>expression précise et nuancée</b> pour communiquer efficacement les conclusions et recommandations de l'étude.
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2024</div>
+                        <h4>Excel / Sphinx</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans cette SAÉ, je me suis mis dans la posture d’un chargé d’étude statistique, en construisant une enquête par questionnaire destinée à répondre à une problématique concrète. Ce travail m’a permis d’aborder toutes les étapes d’une enquête : de la conception du questionnaire à l’analyse des réponses.</p>
+                        <p>J’ai mobilisé les ressources <i>communication professionnelle</i> (R1.08) pour formuler des questions claires et adaptées au public cible, ainsi que <i>découverte des données de l’environnement entrepreneurial et économique</i> (R1.09) pour cadrer l’enquête dans un contexte pertinent et exploitable.</p>
+                        <p>J’ai conçu un questionnaire via Sphinx Online, en veillant à formuler des questions neutres, à limiter les biais, et à structurer la réponse. J’ai ensuite collecté les réponses, traité les données dans Excel, produit des graphiques pertinents et rédigé une analyse synthétique. J’ai présenté les résultats avec un regard critique, en explicitant les limites de l’échantillon et les précautions à prendre dans l’interprétation.</p>
+                        <p>J’ai appris à concevoir un questionnaire pertinent et structuré, à identifier les biais possibles dès la formulation des questions, à contextualiser les résultats d’une enquête, et à valoriser mes analyses par une restitution claire, argumentée et visuellement efficace.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 13.01 |</span>Prendre connaissance des biais rencontrés dans la mise en place d’une enquête<br>
+                            <i>J’ai identifié les biais potentiels liés à la formulation des questions et à l’échantillonnage, et j’ai veillé à les limiter autant que possible pour garantir la fiabilité des résultats.</i><br><br>
+                            
+                            <span>— AC 13.02 |</span>Identifier l’importance de contextualiser ses données<br>
+                            <i>J’ai su relier les résultats et les graphiques à un contexte local et pertinent (CPIE de Belle-Île-en-Mer), afin de rendre l’analyse exploitable et adaptée aux besoins du projet.</i><br><br>
+                            
+                            <span>— AC 13.05 |</span>Comprendre les intérêts de la data visualisation et de l’infographie<br>
+                            <i>J’ai mobilisé des outils graphiques (secteurs, barres empilées) pour rendre les résultats plus clairs et faciliter leur lecture et leur interprétation.</i><br><br>
+                            
+                            <span>— AC 13.06 |</span>Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats<br>
+                            <i>J’ai veillé à utiliser une expression précise et nuancée dans la rédaction des commentaires et conclusions, afin de rendre mes résultats professionnels et compréhensibles par tous les publics.</i><br><br>
+                            
+                            <b>NB :</b> L’AC 13.04 (lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie) n’a pas été mobilisé dans ce projet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Projets</title>
+
+    <script>
+        document.documentElement.classList.add('js');
+
+        const filtreActif = localStorage.getItem('filtreActif') || 'traiter';
+        const style = document.createElement('style');
+        style.dataset.filtre = filtreActif;
+        style.textContent = `
+            .js .filtre.${filtreActif} { background-color: #d6d8db; color: #495057; border-color: #495057; }
+            .js .item.${filtreActif} { display: flex; }
+            .js .description.${filtreActif} { display: block; }
+        `;
+        document.head.appendChild(style);
+
+        function appliquerStyleFiltreActif(category) {
+            const styles = document.querySelectorAll('style[data-filtre]');
+            styles.forEach(style => style.remove());
+
+            const newStyle = document.createElement('style');
+            newStyle.dataset.filtre = category;
+            newStyle.textContent = `
+                .js .filtre.${category} { background-color: #d6d8db; color: #495057; border-color: #495057; }
+                .js .item.${category} { display: flex; }
+                .js .description.${category} { display: block; }
+            `;
+            document.head.appendChild(newStyle);
+        }
+
+        function filtrerItems(category) {
+            const items = document.querySelectorAll('.item');
+            const tags = document.querySelectorAll('.filtre');
+            const descriptions = document.querySelectorAll('.description');
+
+            tags.forEach(tag => tag.classList.remove('selected'));
+            const selectedTag = document.querySelector(`.filtre.${category}`);
+            if (selectedTag) {
+                selectedTag.classList.add('selected');
+            }
+
+            items.forEach(item => {
+                item.style.display = item.classList.contains(category) ? 'flex' : 'none';
+            });
+
+            descriptions.forEach(desc => {
+                desc.style.display = desc.classList.contains(category) ? 'block' : 'none';
+            });
+
+            appliquerStyleFiltreActif(category);
+
+            localStorage.setItem('filtreActif', category);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const filtreSauvegarde = localStorage.getItem('filtreActif') || 'traiter';
+            filtrerItems(filtreSauvegarde);
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../index.html">Accueil</a>
+            <a class="selected">Projets</a>
+            <a href="about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">Projets</h1>
+
+    <div class="filtres">
+        <span class="filtre traiter" onclick="filtrerItems('traiter')">Traiter des données structurées</span>
+        <span class="filtre analyser" onclick="filtrerItems('analyser')">Mettre en œuvre une analyse descriptive</span>
+        <span class="filtre valoriser" onclick="filtrerItems('valoriser')">Contextualiser et présenter les données</span>
+    </div>
+
+    <div class="descriptions">
+        <p class="description traiter">Cette compétence correspond à la capacité à manipuler les données tout au long de leur cycle de vie. Elle repose sur la maîtrise des bases de données, des requêtes SQL, de la programmation, et des outils de gestion. Elle implique une compréhension précise des besoins et une structuration rigoureuse du travail.</p>
+        <p class="description analyser">Il s'agit d'explorer les données à l’aide de méthodes statistiques pour en dégager des tendances, vérifier des hypothèses, interpréter les résultats, et proposer des réponses adaptées à des problématiques concrètes.</p>
+        <p class="description valoriser">Cette compétence implique de savoir communiquer les résultats de façon claire et pertinente. Elle inclut la datavisualisation, la communication écrite et orale, ainsi que le respect des règles éthiques et légales liées à l’usage des données.</p>
+    </div>
+    
+    <div class="content">
+        <div class="works-list">
+            <a href="projects/SAE_101.html" class="item traiter">
+                <div class="details">
+                    <h3>Reporting à partir de données stockées dans un SGBD relationnel</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>SAÉ 1.01</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Traiter des données structurées</span>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="projects/SAE_102.html" class="item traiter">
+                <div class="details">
+                    <h3>Écriture et lecture de fichiers de données</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2024</div>
+                        <h4>SAÉ 1.02</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Traiter des données structurées</span>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="projects/SAE_103.html" class="item analyser">
+                <div class="details">
+                    <h3>Préparation et synthèse d’un tableau de données</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2024</div>
+                        <h4>SAÉ 1.03</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Mettre en œuvre une analyse descriptive</span>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="projects/SAE_104-105.html" class="item valoriser">
+                <div class="details">
+                    <h3>Production de données en entreprise et présentation en anglais
+                    </h3>
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>SAÉ 1.04 | SAÉ 1.05</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Contextualiser et présenter les données</span>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="projects/SAE_106.html" class="item valoriser">
+                <div class="details">
+                    <h3>Mise en œuvre d’une enquête</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2024</div>
+                        <h4>SAÉ 1.06</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Contextualiser et présenter les données</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/SAE_201.html" class="item traiter">
+                <div class="details">
+                    <h3>Conception et implémentation d'une base de données relationnelle</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>SAÉ 2.01</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Traiter des données structurées</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="projects/SAE_202.html" class="item analyser">
+                <div class="details">
+                    <h3>Estimation par échantillonnage</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>SAÉ 2.02</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Mettre en œuvre une analyse descriptive</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="projects/SAE_203.html" class="item analyser">
+                <div class="details">
+                    <h3>Régression sur données réelles</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>SAÉ 2.03</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Mettre en œuvre une analyse descriptive</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/SAE_204.html" class="item traiter analyser valoriser">
+                <div class="details">
+                    <h3>Datavisualisation</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>SAÉ 2.04</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Traiter des données structurées</span>
+                        <span class="competence-badge">Mettre en œuvre une analyse descriptive</span>
+                        <span class="competence-badge">Contextualiser et présenter les données</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/SAE_205.html" class="item valoriser">
+                <div class="details">
+                    <h3>Construction et présentation d’indicateurs de performance</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>SAÉ 2.05</h4>
+                    </div>
+                    <div class="competences">
+                        <span class="competence-badge">Contextualiser et présenter les données</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+<table>
+  <colgroup>
+    <col style="width: 200px;">
+    <col style="width: 200px;">
+    <col style="width: 200px;">
+    <col style="width: 200px;">
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th colspan="2">1ère année</th>
+      <th colspan="2">2ème année</th>
+    </tr>
+    <tr>
+      <th>Compétence</th>
+      <th>Niveau d'acquisition</th>
+      <th>Compétence</th>
+      <th>Projection</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>AC 11.01</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 21.01</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 11.02</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 21.02</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 11.03</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 21.03</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 11.04</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 21.04</td>
+      <td style="color: green;">Acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 11.05</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 21.05</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 11.06</td>
+      <td style="color: green;">Acquis</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>AC 12.01</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 22.01</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 12.02</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 22.02</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 12.03</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 22.03</td>
+      <td style="color: green;">Acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 12.04</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 22.04</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 12.05</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 22.05</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 12.06</td>
+      <td style="color: green;">Acquis</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>AC 13.01</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 23.01</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 13.02</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 23.02</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 13.03</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 23.03</td>
+      <td style="color: green;">Acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 13.04</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 23.04</td>
+      <td style="color: green;">Acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 13.05</td>
+      <td style="color: green;">Acquis</td>
+      <td>AC 23.05</td>
+      <td style="color: red;">Non acquis</td>
+    </tr>
+
+    <tr>
+      <td>AC 13.06</td>
+      <td style="color: green;">Acquis</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../assets/script.js"></script>
+</body>
+
+</html>

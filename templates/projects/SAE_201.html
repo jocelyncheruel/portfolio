@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 2.01</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 2.01 – Conception et implémentation d'une base de données relationnelle</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_201/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_201/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_201/preuve_3.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_201/preuve_4.png">
+                        </div>
+                        
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_201/preuve_5.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette capture d’écran montre l’<b>introduction du rapport</b> rédigée dans le cadre de la SAÉ. Elle présente le <b>contexte global du projet</b>, le <b>cahier des charges</b> et les <b>objectifs attendus</b> : modéliser et implémenter une base de données relationnelle pour une entreprise fictive spécialisée dans la vente de composants informatiques.<br><br>
+                        J’ai rédigé ce texte en veillant à <b>structurer l’information</b> de manière logique et progressive : d’abord la présentation de l’entreprise, puis la description des besoins, et enfin la méthodologie adoptée (analyse du sujet, conception du modèle Merise, implémentation sous Access).<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 11.01</b>, car j’ai su <b>interpréter le besoin du commanditaire</b> permettant la suite du projet. Elle valide également la compétence <b>AC 11.02</b>, car j’ai utilisé une <b>présentation structurée et lisible</b> avec des listes à puces et des paragraphes aérés, respectant les bonnes pratiques de rédaction.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran illustre le <b>schéma relationnel</b> de la base de données réalisée dans Access pour le projet. On y observe une structuration complète des données avec <b>des tables principales</b> (ARTICLES, FACTURES, CLIENTS, FOURNISSEURS, EMPLOYES, etc.) et <b>des relations entre elles</b> (liens un-à-plusieurs, clés primaires et étrangères).<br><br>
+                        J’ai conçu ce schéma pour <b>représenter les entités et leurs relations</b> de manière cohérente et normalisée, en veillant à respecter l’intégrité référentielle et à éviter les redondances. Cette représentation graphique m’a permis de <b>valider la structure de la base de données</b> avant de passer à l’implémentation.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 11.04</b>, car j’ai su <b>analyser, modéliser et interpréter la structure des données</b> pour garantir la qualité et la fiabilité des informations stockées dans la base de données.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran montre la <b>table EMPLOYES</b> de la base de données, avec les <b>champs, libellés, types de données et contraintes</b> définis. On y voit que chaque champ est précisé (ex. NUM_EMP comme identifiant, NOM_EMP et PRENOM_EMP pour l’identité), ainsi que sa <b>nature</b> (saisi, incrémenté), sa <b>stabilité</b> (stable, évolutif) et son <b>domaine</b> (entier, texte, date, etc.).<br><br>
+                        J’ai structuré cette table avec soin pour garantir la <b>cohérence des données</b> et la <b>conformité aux règles de gestion</b> définies dans le sujet. J’ai aussi précisé les contraintes (ex. nombre de caractères, bornes pour les entiers) afin d’éviter les erreurs de saisie et de valider les données.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 11.04</b>, car j’ai su <b>définir une structure de données</b> adaptée aux besoins fonctionnels du projet, en tenant compte des contraintes de gestion et des types de données.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran montre le <b>formulaire de saisie des employés</b> conçu dans la base de données Access pour gérer les informations du personnel. Chaque champ correspond à une donnée précise (nom, prénom, adresse, code postal, ville, service, spécialité, date d’embauche, etc.) afin de permettre une saisie complète des données des employés de l'entreprise.<br><br>
+                        J’ai conçu ce formulaire pour <b>faciliter la saisie et la validation des données</b> avec une interface claire et structurée. Les champs obligatoires et les formats de données (ex. date d’embauche, salaire mensuel, numéro du superviseur) ont été soigneusement définis pour assurer la cohérence des informations et éviter les erreurs de saisie.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 11.01</b>, car j’ai su <b>concevoir un outil de saisie (formulaire) pour répondre aux besoins du projet</b> et faciliter l’intégration des données dans la base de données. Elle montre également que j’ai acquis la compétence <b>AC 11.04</b>, car j’ai compris l’importance d’adapter les interfaces face aux exigences, tout en respectant la structure et la cohérence des données.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran illustre une <b>requête SQL plutôt complexe</b> développée dans Access pour répondre à la question n°42 du projet. Elle permet de calculer le <b>chiffre d’affaires (hors frais de port)</b> par mois et par vendeur en concaténant le prénom et le nom de l’employé, et en utilisant des fonctions SQL telles que <code>ROUND()</code>, <code>SUM()</code>, <code>FORMAT()</code> et <code>REPLACE()</code> pour gérer les calculs et les formats.<br><br>
+                        J’ai rédigé cette requête en respectant les <b>formalismes de notation</b> (indentation, alias, mise en forme des noms de colonnes) et en appliquant une <b>structure logique claire</b> qui facilite la relecture. J’ai également pris en compte les besoins du projet en utilisant des <b>jointures internes</b> pour relier les tables entre elles.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 11.02</b>, car j’ai respecté les bonnes pratiques de <b>présentation du code SQL</b>. Elle prouve aussi que j’ai acquis la compétence <b>AC 11.03</b>, car j’ai utilisé correctement la <b>syntaxe SQL</b> pour effectuer des calculs et des agrégations de données. Elle valide également la compétence <b>AC 11.06</b>, car ce projet m’a permis de <b>prendre conscience de l’intérêt de la programmation</b> pour automatiser les traitements.
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>Access / SQL</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans cette SAÉ, j’ai occupé la posture d’un gestionnaire de base de données. Mon rôle était de concevoir et d’implémenter une base relationnelle à partir d’un cahier des charges détaillant les besoins d’un client fictif. Ce travail m’a permis de comprendre les étapes clés de la modélisation à l’alimentation d’une base réelle.</p>
+                        <p>J’ai mobilisé les ressources <i>reporting et datavisualisation</i> (R2.01), <i>bases de données relationnelles 2</i> (R2.02) et <i>bases de la programmation 2</i> (R2.03) pour structurer ma démarche de conception, implémenter des tables, assurer l’intégrité des données et documenter l’ensemble du projet.</p>
+                        <p>J’ai réalisé l’analyse des besoins, produit un MCD (Modèle Conceptuel de Données), construit le schéma relationnel, puis implémenté la base dans Access. J’ai inséré les jeux de données fournis, testé la cohérence des contraintes, ajouté des requêtes SQL pour des extractions ciblées, et rédigé une documentation technique.</p>
+                        <p>J’ai appris à interpréter un besoin métier pour en faire une structure de données exploitable, à utiliser les outils de modélisation avec rigueur, à garantir la cohérence et la qualité des données, et à produire une base de données fonctionnelle et bien structurée dans un contexte professionnel.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 11.01 |</span>Correctement interpréter et prendre en compte le besoin du commanditaire ou du client<br>
+                            <i>J’ai su analyser le sujet et identifier les besoins pour modéliser et implémenter la base de données en respectant les exigences.</i><br><br>
+
+                            <span>— AC 11.02 |</span>Respecter les formalismes de notation<br>
+                            <i>J’ai structuré les schémas relationnels et rédigé les requêtes SQL en respectant les conventions de notation et en veillant à la clarté et à la lisibilité du code.</i><br><br>
+
+                            <span>— AC 11.03 |</span>Connaître la syntaxe des langages et savoir l’utiliser<br>
+                            <i>J’ai mobilisé efficacement la syntaxe SQL pour créer des requêtes afin d’obtenir de bons résultats.</i><br><br>
+
+                            <span>— AC 11.04 |</span>Mesurer l’importance de maîtriser la structure des données à exploiter<br>
+                            <i>J’ai conçu et validé la structure de la base de données pour garantir la cohérence, la qualité et la fiabilité des informations.</i><br><br>
+
+                            <span>— AC 11.06 |</span>Prendre conscience de l’intérêt de la programmation<br>
+                            <i>J’ai compris que la programmation (SQL) permet d’automatiser les traitements, pour permettre une bonne efficacité du projet.</i><br><br>
+
+                            <b>NB :</b> L’AC 11.05 (Comprendre les structures algorithmiques de base et leur contexte d’usage) n’a pas été mobilisé dans ce projet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 2.05</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 2.05 – Construction et présentation d’indicateurs de performance</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_205/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_205/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_205/preuve_3.png">
+                        </div>
+                        
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_205/preuve_4.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_205/preuve_5.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette capture d’écran montre le <b>flyer promotionnel</b> que j'ai conçu pour présenter l'entreprise fictive, INOVAM, et ses offres de services lors de la SAÉ. Le flyer met en avant des <b>promotions spéciales</b>, illustrées par des images et des prix attractifs pour <b>attirer l’attention des clients</b> potentiels.<br><br>
+                        J’ai travaillé sur ce flyer en choisissant des <b>visuels adaptés</b>, en rédigeant un <b>texte marketing</b> clair et en intégrant les informations importantes telles que les <b>contacts</b>, les <b>promotions</b> et les <b>services proposés</b>. J’ai veillé à ce que le design soit à la fois moderne, attirant et professionnel, en utilisant des couleurs cohérentes.<br><br>
+                        Cette preuve valide la compétence <b>AC 13.02</b>, car j’ai su contextualiser l'offre en la présentant de manière adaptée et pertinente. Elle montre également que j’ai acquis la compétence <b>AC 13.05</b>, car j’ai compris l’importance de la <b>data visualisation et de l’infographie</b> pour rendre l’information plus accessible et compréhensible.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran présente un <b>flyer promotionnel</b> réalisé pour la SAÉ. On y voit une mise en page attirante et un message clair qui alerte sur les risques liés aux virus informatiques, réalisé lors d'une étape du projet. Il propose une solution efficace avec la réinstallation du système.<br><br>
+                        Ce flyer est conçu pour garder la clientèle de l'entreprise et l’informer de manière simple et directe sur l'un des services proposés. Il présente un texte structuré et illustré qui rassure et incite à agir. La mise en forme visuelle est pensée pour renforcer le message et faciliter la lecture.<br><br>
+                        Cette preuve valide la compétence <b>AC 13.02</b>, car j’ai su <b>contextualiser les données</b> en reliant la prestation proposée au problème concret du virus. Elle valide également la compétence <b>AC 13.05</b>, car j’ai compris l’importance de la <b>data visualisation et de l’infographie</b> pour rendre l’information plus accessible et compréhensible.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran présente un <b>graphique en barres</b> montrant le <b>chiffre d’affaires</b> réalisé sur huit périodes différentes (P1 à P8). Chaque barre représente la valeur du chiffre d’affaires pour une période donnée.<br><br>
+                        Ce visuel est essentiel pour <b>comparer</b> facilement les résultats et <b>identifier les périodes de forte activité</b> (P5 et P6) ainsi que les périodes de <b>faible performance</b> (P1 et P7). La lecture du graphique est facilitée par une échelle bien choisie et une représentation claire des données.<br><br>
+                        Cette preuve valide la compétence <b>AC 13.03</b>, car j’ai su <b>mettre en évidence des résultats clés</b> grâce à l’utilisation d’indicateurs pertinents et d’un visuel adapté. Elle valide également la compétence <b>AC 13.05</b>, car j’ai compris l’importance de la <b>data visualisation et de l’infographie</b> pour rendre les résultats plus lisibles et plus accessibles.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran présente un <b>graphique en barres</b> montrant le <b>résultat net</b> (en euros) réalisé sur huit périodes (P1 à P8). Chaque barre indique un résultat négatif ou positif, permettant de repérer les périodes en déficit et les périodes où le résultat est légèrement positif.<br><br>
+                        Ce graphique est essentiel pour <b>visualiser rapidement les performances de l’activité</b> et pour <b>identifier les périodes critiques</b>. La présentation claire et la différenciation entre les valeurs négatives et positives rendent la lecture du résultat plus accessible et compréhensible.<br><br>
+                        Cette preuve valide la compétence <b>AC 13.03</b>, car j’ai su <b>mettre en évidence des résultats clés</b> à travers un visuel clair et pertinent. Elle valide également la compétence <b>AC 13.05</b>, car j’ai compris l’importance de la <b>data visualisation et de l’infographie</b> pour communiquer efficacement les résultats et faciliter la prise de décision.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran présente un <b>graphique en courbes</b> permettant de comparer les <b>budgets d’entreprise</b> consacrés à l’<i>agencement</i> et à la <i>publicité</i> au cours des huit périodes (P1 à P8). Chaque ligne permet de suivre l’évolution des dépenses pour ces deux postes budgétaires au fil du temps.<br><br>
+                        Ce graphique est particulièrement utile pour <b>comparer l’évolution des deux budgets</b> et <b>mettre en évidence les pics de dépenses</b> (P5 et P8 pour la publicité). La différenciation par couleur et le choix d’un graphique en lignes permettent de visualiser clairement les variations d’un budget à l’autre.<br><br>
+                        Cette preuve valide la compétence <b>AC 13.03</b>, car j’ai su <b>mettre en évidence des résultats clés</b> grâce à l’utilisation d’indicateurs pertinents (courbes et légendes). Elle valide également la compétence <b>AC 13.05</b>, car j’ai compris l’importance de la <b>data visualisation et de l’infographie</b> pour comparer des données et faciliter l’interprétation des résultats.
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>Excel</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans cette SAÉ, j’ai participé au jeu TerStrat de Strat&Logic, qui simule la gestion d’une entreprise de services. En tant que gestionnaire virtuel, j’ai été confronté à des décisions stratégiques à prendre à chaque tour, comme le recrutement, l’investissement dans les équipements, la fixation des prix, ou encore la gestion des budgets. L’objectif était d’optimiser les indicateurs de performance de l’entreprise dans un contexte concurrentiel simulé.</p>
+                        <p>J’ai mobilisé la ressource <i>étude des données de l’environnement entrepreneurial et économique</i> (R2.11) pour analyser les tableaux de bord fournis par le jeu, comprendre les mécanismes économiques associés (coût, rentabilité, capacité de production, satisfaction client), et construire une stratégie cohérente à chaque période du jeu.</p>
+                        <p>À l’aide des indicateurs fournis (coût des prestations, rentabilité, temps de réalisation, capacité, parts de marché, etc.), j’ai conçu des tableaux de suivi dans Excel et proposé des ajustements : embauche, choix des équipements à amortir, orientation du budget communication, ou encore analyse du retour sur investissement des études de marché.</p>
+                        <p>J’ai appris à extraire les bons indicateurs, à mettre les données en lien avec les décisions prises, à expliciter les stratégies retenues, et à présenter visuellement les résultats.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 13.02 |</span>Identifier l’importance de contextualiser ses données<br>
+                            <i>J’ai su présenter les données de l’entreprise de manière pertinente, en faisant des graphiques et des visuels.</i><br><br>
+
+                            <span>— AC 13.03 |</span>Mesurer l’importance de mettre en évidence des résultats clés par l’utilisation d’indicateurs pertinents<br>
+                            <i>J’ai choisi des graphiques pertinents et des indicateurs précis pour montrer l’évolution du chiffre d’affaires, du résultat et des budgets afin de faciliter la prise de décision.</i><br><br>
+
+                            <span>— AC 13.05 |</span>Comprendre les intérêts de la data visualisation et de l’infographie<br>
+                            <i>J’ai réalisé des supports visuels attirants et pertinents (graphique en barres, courbes, flyers) pour rendre l’information plus accessible et favoriser la compréhension des résultats.</i><br><br>
+
+                            <b>NB :</b> L’AC 13.04 (Lors de la restitution des résultats, mesurer l’importance d’expliciter également la démarche suivie) n’a pas été mobilisé dans ce projet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>

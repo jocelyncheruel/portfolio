@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 2.03</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 2.03 – Régression sur données réelles</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_203/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_203/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_203/preuve_3.png">
+                        </div>
+                        
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_203/preuve_4.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_203/preuve_5.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette capture d’écran présente un <b>tableau statistique descriptif</b> des variables du jeu de données que j'ai choisi pour l'étude. On y voit les mesures de tendance centrale (moyenne, médiane), de dispersion (écart-type) ainsi que les valeurs minimales et maximales pour chaque variable (âge, pression artérielle au repos, cholestérol, etc.).<br><br>
+                        Cette synthèse a permis de repérer les variables présentant <b>des valeurs extrêmes</b> (ex. cholestérol), afin d’anticiper leur impact sur l'étude. Elle m’a permis de <b>comprendre la distribution des variables</b> et de les décrire.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 12.03</b>, car j’ai su <b>utiliser des synthèses numériques</b> (tableaux descriptifs) pour décrire les variables.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran présente un <b>code R</b> permettant de réaliser un <b>nuage de points</b> entre les variables <i>age</i> et <i>thalach</i> (fréquence cardiaque maximale atteinte), et d’y superposer les courbes d’ajustement issues de deux modèles de régression (mod1 et mod2).<br><br>
+                        Le code inclut des <b>éléments de personnalisation visuelle</b> : couleur des points, titre des axes, limites de l’axe Y et suppression des labels automatiques pour une meilleure lisibilité. L’ajout des droites et courbes d’ajustement (via <code>abline()</code> et <code>curve()</code>) permet de comparer visuellement la pertinence des deux modèles.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 12.04</b>, car j’ai <b>intégré des ajustements statistiques</b> (droite et courbe) pour <b>mettre en évidence la relation potentielle entre l’âge et la fréquence cardiaque maximale atteinte</b>.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran illustre le <b>nuage de points entre l’âge des patients et la fréquence cardiaque maximale atteinte</b>, avec la superposition de <b>la droite et de la courbe issues des deux modèles de régression</b>.<br><br>
+                        On observe visuellement une tendance générale à la baisse de la fréquence cardiaque maximale atteinte avec l’âge. L’utilisation de ces deux ajustements permet de comparer la qualité d’ajustement et d’illustrer les éventuelles différences entre une modélisation linéaire et polynômial.<br><br>
+                        Cette preuve valide la compétence <b>AC 12.03</b>, car elle démontre l’utilisation d’un <b>graphique pour décrire la liaison entre deux variables</b>.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran montre le code permettant d'afficher l’<b>histogramme des résidus</b> issus du <b>modèle 2 de régression</b> réalisé. L’axe des X correspond aux valeurs des résidus, tandis que l’axe des Y affiche la <b>fréquence d’apparition</b> de ces résidus.<br><br>
+                        Cet histogramme aide à vérifier la <b>distribution des résidus</b> afin d'évaluer la normalité et la symétrie des erreurs pour juger la validité du modèle.<br><br>
+                        Cette preuve valide la compétence <b>AC 12.04</b>, car j’ai su <b>mettre en évidence la distribution des erreurs et vérifier la cohérence du modèle</b>.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran représente l’<b>histogramme des résidus</b> du <b>modèle 2 de régression</b>. On observe la distribution des erreurs centrées autour de 0, ce qui est essentiel pour vérifier la validité du modèle.<br><br>
+                        Cet histogramme met en évidence une distribution relativement <b>asymétrique</b>.<br><br>
+                        Cette preuve valide la compétence <b>AC 12.03</b>, car elle illustre l’utilisation d’un <b>graphique pour évaluer la qualité du modèle</b>.
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>R / Excel</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans cette SAÉ, j’ai endossé le rôle d’un chargé d’étude statistique en répondant à une problématique concrète à l’aide d’une analyse de régression. L’objectif était de mettre en évidence les liaisons entre certaines variables quantitatives à partir de données réelles issues de l'open data.</p>
+                        <p>J’ai mobilisé les ressources <i>programmation statistique</i> (R2.04) pour le traitement des données et la réalisation des graphiques sous R, ainsi que <i>statistique descriptive 2</i> (R2.05) pour interpréter les résultats et choisir les indicateurs pertinents à calculer.</p>
+                        <p>J’ai préparé un tableau individus/variables à partir de données de santé, exploré les relations possibles par des représentations graphiques, puis testé plusieurs ajustements de régression.</p>
+                        <p>J’ai appris à repérer visuellement les liaisons entre variables, à choisir le bon type d’ajustement, à évaluer la qualité d’un modèle de régression, et à communiquer les résultats de manière claire en utilisant des graphiques et des indicateurs bien choisis.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 12.03 |</span>Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique<br>
+                            <span>— AC 12.04 |</span>Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2035, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>

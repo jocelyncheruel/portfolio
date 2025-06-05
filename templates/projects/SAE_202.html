@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 2.02</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 2.02 – Estimation par échantillonnage</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_202/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_202/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_202/preuve_3.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette capture d’écran montre un <b>tableau de données brutes</b> que j'ai utilisé lors de la SAÉ. On y voit des colonnes indiquant des variables comme l’<b>âge</b>, les <b>dépenses</b> ou encore le <b>revenu</b>. Ces données sont utilisées comme base pour estimer des <b>paramètres statistiques</b> à partir d’un échantillon et calculer des <b>intervalles de confiance</b>.<br><br>
+                        J’ai travaillé sur ce jeu de données en veillant à vérifier l’absence de valeurs manquantes, identifier les variables pour l’échantillonnage et préparer les données pour calculer les estimations.<br><br>
+                        Cette preuve montre que j’ai acquis <b>AC 12.02</b> en m’assurant de la <b>préparation et de la propreté des données</b> avant les calculs.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran illustre un <b>script R</b> que j'ai développé pour déterminer la plus petite valeur de N (nombre d’observations) à retenir lors d’une estimation par échantillonnage. Le code parcourt chaque ligne d’un jeu de données et calcule la moyenne (<code>hat_m</code>) et l’écart-type (<code>hat_sigma</code>), puis déduit les bornes de l’intervalle de confiance à un niveau <b>alpha</b> choisi (ici, <code>alpha = 0.10</code>). Ensuite, le code identifie le plus petit nombre de valeurs qui restent incluses dans cet intervalle et affiche ce résultat.<br><br>
+                        J’ai structuré ce script en utilisant des <b>boucles</b>, des <b>fonctions statistiques</b> (<code>mean()</code>, <code>sd()</code>, <code>qnorm()</code>) adaptées à la statistique inférentielle, et une condition pour la recherche du plus petit N. La lisibilité du script est assurée par les indentations et un choix pertinent de noms de variables pertinent.<br><br>
+                        Cette preuve montre que j’ai acquis la compétence <b>AC 12.01</b>, car j’ai pris en compte les <b>caractéristiques des données et les contraintes d’échantillonnage</b>. Elle valide également la compétence <b>AC 12.05</b>, car j’ai compris et appliqué les concepts probabilistes pour calculer des <b>intervalles de confiance</b> fiables. Enfin, elle prouve aussi la compétence <b>AC 12.06</b>, car j’ai pris conscience de la <b>variabilité des résultats selon l’échantillon considéré</b> et son influence sur la précision des estimations.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran illustre un <b>script R</b> conçu pour calculer un <b>intervalle de confiance à 95 %</b> pour une proportion estimée à partir d’un échantillon aléatoire tiré d’un autre jeu de données. Le code sélectionne un échantillon de taille 50, puis calcule la proportion observée ayant un caractère particulier (ici <code>D</code>). Ensuite, il déduit les bornes inférieure et supérieure de l’intervalle en utilisant la formule de l’intervalle (loi normale), et affiche le résultat.<br><br>
+                        J’ai structuré ce script avec des fonctions statistiques clés (<code>mean()</code>, <code>qnorm()</code>), et respecté les bonnes pratiques d’écriture pour assurer la lisibilité et la compréhension du code (indentation, noms de variables explicites).<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 12.01</b>, car j’ai su <b>adapter la méthode de calcul</b> aux caractéristiques de la variable étudiée et à la taille de l’échantillon. Elle valide aussi la compétence <b>AC 12.05</b>, car j’ai compris et appliqué les concepts probabilistes pour <b>mesurer l’incertitude d’une estimation</b> (l’intervalle de confiance). Enfin, elle illustre la compétence <b>AC 12.06</b>, car j’ai pris conscience de la <b>variabilité des résultats</b> due à l’échantillonnage et la taille de l’échantillon.
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>R / Excel</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans cette SAÉ, j’ai été placé dans la posture d’un chargé d’étude statistique. Mon objectif était d’estimer des paramètres à partir d’un échantillon, en tenant compte de la marge d’erreur liée à l’échantillonnage. Ce travail m’a permis de mieux comprendre la distinction entre échantillon et population ainsi que les enjeux liés à la fiabilité des estimations en fonction de la taille d'échantillon.</p>
+                        <p>J’ai mobilisé les ressources <i>statistique inférentielle</i> (R2.08) pour estimer les paramètres et calculer des intervalles de confiance, ainsi que <i>probabilités 2</i> (R2.06) pour l'utilisation de théorèmes de convergence tels que la loi des grands nombres et le théorème central limite (TCL).</p>
+                        <p>J’ai effectué des tirages aléatoires sur un jeu de données réelles, calculé des estimations ponctuelles, déterminé des intervalles de confiance, étudié la notion de population stratifié et mis en place des automatismes. J’ai ensuite interprété ces estimations et évalué leur précision selon la taille des échantillons ou les paramètres étudiés.</p>
+                        <p>J’ai appris à distinguer population et échantillon, à comprendre la variabilité des résultats due à l’échantillonnage, à utiliser des outils probabilistes pour calculer une estimation, et à rendre compte de mes résultats de façon rigoureuse.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 12.01 |</span>Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)<br>
+                            <i>J’ai su identifier les variables importantes pour l’échantillonnage et tenir compte des données afin d’assurer la validité des estimations.</i><br><br>
+                            
+                            <span>— AC 12.02 |</span>Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées<br>
+                            <i>J’ai vérifié les jeux de données pour voir s'il y avait des valeurs manquantes ou aberrantes avant d’effectuer les calculs.</i><br><br>
+                            
+                            <span>— AC 12.05 |</span>Comprendre l'intérêt de l’utilisation d’un modèle probabiliste<br>
+                            <i>J’ai utilisé des intervalles de confiance et des outils probabilistes pour mesurer l’incertitude des estimations et interpréter les résultats de manière rigoureuse.</i><br><br>
+                            
+                            <span>— AC 12.06 |</span>Appréhender la notion de fluctuation d'échantillonnage, notamment à l’aide de simulations probabilistes<br>
+                            <i>J’ai pris conscience que la taille de l’échantillon influence les résultats obtenus, et j’ai appliqué ce principe dans mes calculs et conclusions.</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>

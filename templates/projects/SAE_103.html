@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 1.03</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 1.03 – Préparation et synthèse d’un tableau de données en vue d’une analyse exploratoire simple</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_103/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_103/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_103/preuve_3.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_103/preuve_4.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_103/preuve_5.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_103/preuve_6.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette capture d’écran présente une <b>synthèse d'article</b> décrivant les principales tendances des déplacements domicile-travail en France entre 1999 et 2019.<br><br>
+                        J’ai <b>analysé et résumé les informations clés</b> de l’article pour en extraire les éléments pertinents à l’étude des distances domicile-travail selon les catégories de travailleurs et les zones géographiques.<br><br>
+                        Cette preuve illustre la compétence <b>AC 12.01</b>, car j’ai su reconnaître que les données présentées comportent des <b>variations géographiques et professionnelles</b> à considérer pour garantir une analyse pertinente.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran montre le <b>tableau des distances médianes domicile-travail</b> en 2019 pour les actifs en emploi résidant dans le rural, selon la taille de l’aire d’attraction des villes.<br><br>
+                        J’ai analysé ces données pour comprendre les <b>écarts de distance</b> entre les différentes zones rurales (ensemble rural, bourgs ruraux périurbains et rural à habitat dispersé périurbain). J’ai ainsi pu observer que la distance augmente avec la taille des pôles urbains.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 12.02</b>, car j’ai su <b>préparer et organiser les données</b> pour une analyse pertinente, en distinguant les sous-catégories et en identifiant les variables pour une bonne interprétation.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce graphique présente la <b>distance médiane domicile-travail</b> en 2019 pour les actifs résidant dans le rural, selon la taille de l’aire d’attraction des villes. Il synthétise les données du tableau précédent en les représentant visuellement avec des barres colorées selon la catégorie (ensemble rural, bourgs ruraux périurbains, rural à habitat dispersé périurbain).<br><br>
+                        Cette visualisation m’a permis de <b>comparer rapidement les écarts</b> entre les catégories et de <b>mettre en évidence la tendance croissante</b> des distances lorsque la taille des aires augmente.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 12.04</b>, car j’ai su <b>exploiter une représentation graphique</b> pour mettre en évidence les relations entre variables et faciliter l’interprétation des résultats.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce graphique met en évidence les <b>distances médianes domicile-travail</b> des actifs en emploi résidant dans le rural en 2019, selon le libellé de l’aire d’attraction des villes. Il présente visuellement les écarts selon les catégories géographiques, ce qui permet d’<b>observer les disparités de distance</b> selon le type de commune (commune-centre, commune hors attraction des villes, etc.).<br><br>
+                        Cette représentation graphique m’a permis de <b>comparer visuellement les distances médianes</b> et de mieux comprendre les dynamiques territoriales.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 12.03</b>, car j’ai su <b>mettre en place une synthèse graphique pertinente</b> pour décrire une variable statistique et faciliter l’interprétation des résultats.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran présente un <b>tableau détaillé</b> indiquant la <b>distance médiane domicile-travail</b> des actifs résidant dans le rural selon les régions de résidence, pour les années 1999 et 2019. Le tableau inclut également l’<b>écart de distance</b> et son évolution en pourcentage.<br><br>
+                        Cette analyse m’a permis de <b>mettre en évidence les variations</b> de cette distance, entre les différentes régions.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 12.01</b>, car j’ai su <b>prendre en compte les caractéristiques géographiques</b> (variations selon les régions) pour interpréter les données. Elle valide également que j’ai acquis la compétence <b>AC 12.02</b>, puisque j’ai vérifié la qualité du tableau pour en faire une analyse fiable.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce graphique présente la <b>distance médiane domicile-travail</b> des actifs en emploi résidant dans le rural en 1999 et 2019, selon la région de résidence. J’ai représenté ces données sous forme de <b>barres groupées</b> (bleu pour 1999, orange pour 2019) afin de <b>comparer l’évolution</b> des distances dans chaque région.<br><br>
+                        Cette représentation graphique m’a permis d’identifier rapidement les <b>écarts</b> entre les régions.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 12.04</b> car j’ai su <b>mettre en place une synthèse graphique pertinente</b> pour mettre en évidence les relations temporelles entre les distances domicile-travail et les régions de résidence.
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2024</div>
+                        <h4>Excel</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans cette SAÉ, j’ai été placé dans la posture d’un statisticien chargé d’explorer un jeu de données fourni dans une logique d’analyse descriptive. L’objectif était de produire des représentations simples mais pertinentes pour synthétiser l’information et mettre en évidence les éventuelles relations entre les variables.</p>
+                        <p>J’ai mobilisé la ressource <i>statistique descriptive 1</i> (R1.04) pour comprendre les mécanismes de construction des graphiques et indicateurs (moyenne, écart-type, etc.).</p>
+                        <p>J’ai réalisé une exploration statistique du jeu de données en construisant des tableaux croisés dynamiques, des diagrammes en barres et des indicateurs comme la moyenne ou les fréquences. Ces éléments m’ont permis d’observer les distributions, de comparer les modalités et d’identifier des liens entre certaines variables. J’ai ensuite interprété ces résultats dans le contexte de la problématique proposée.</p>
+                        <p>J’ai appris à exploiter un jeu de données dans une logique exploratoire, à représenter les variables de façon synthétique, et à interpréter les résultats obtenus.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 12.01 |</span>Réaliser que les sources de données ont des caractéristiques propres à considérer (variation, précision, mise à jour...)<br>
+                            <i>J’ai su tenir compte des variations géographiques et temporelles des distances domicile-travail et des types de territoires dans l’interprétation des données et des graphiques.</i><br><br>
+
+                            <span>— AC 12.02 |</span>Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées<br>
+                            <i>J’ai vérifié la qualité et l’organisation des tableaux (libellés, structures) avant de réaliser les synthèses graphiques pour garantir la pertinence des résultats.</i><br><br>
+
+                            <span>— AC 12.03 |</span>Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique<br>
+                            <i>J’ai produit des graphiques clairs et pertinents pour représenter les distances médianes domicile-travail selon les catégories territoriales ou professionnelles.</i><br><br>
+
+                            <span>— AC 12.04 |</span>Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables<br>
+                            <i>J’ai comparé les distances domicile-travail entre années ou zones géographiques pour identifier des tendances, et pour démontrer des relations entre plusieurs variables.</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>

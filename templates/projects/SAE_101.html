@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 1.01</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 1.01 – Reporting à partir de données stockées dans un SGBD relationnel</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_101/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_101/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_101/preuve_3.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette capture d’écran montre le <b>schéma relationnel</b> de la base de données utilisé pour le projet. On observe une structure avec des <b>tables principales</b> (Basics, Ratings, Episode, etc.) et des <b>tables de liaison</b> (Principals, hasGenre). Les <b>clés primaires et étrangères</b> sont clairement identifiées, ce qui garantit <b>l’intégrité référentielle</b>.<br><br>
+                        Cette modélisation m’a permis de comprendre les <b>relations entre les entités</b> (films, personnes, genres, etc.) et de concevoir des <b>requêtes SQL cohérentes</b>.<br><br>
+                        Elle prouve que j’ai acquis la compétence <b>AC 11.04</b>, car j’ai su <b>analyser et interpréter la structure des données</b> pour la rendre exploitable. J’ai compris <b>l’importance des clés et des relations</b> pour extraire des informations fiables.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette image présente plusieurs <b>requêtes SQL</b> que j’ai rédigées pour analyser la base de données et répondre aux <b>besoins du commanditaire</b>. On y voit des instructions comme le <b>comptage du nombre de lignes</b> (<code>COUNT()</code>), la <b>détection des valeurs nulles</b> (<code>IS NULL</code>), le <b>calcul de titres distincts</b>, ou encore la <b>moyenne des évaluations</b> (<code>AVG()</code>) et le <b>total des votes</b> par type d’œuvre pour l’année 2020.<br><br>
+                        J’ai structuré chaque requête de façon claire, avec <b>indentation logique</b>, <b>alias explicites</b>, et une organisation qui <b>facilite la relecture</b>. Cela m’a permis d’extraire des <b>indicateurs pertinents</b> à partir de données volumineuses, tout en respectant les standards de présentation SQL.<br><br>
+                        Cette preuve démontre que j’ai acquis la compétence <b>AC 11.02</b>, grâce au <b>respect des formalismes de notation</b> dans la rédaction du code SQL (structure lisible, bonnes pratiques d’alignement, alias clairs). Elle montre aussi que j’ai acquis la compétence <b>AC 11.03</b>, car j’ai <b>utilisé correctement la syntaxe du langage SQL</b> (fonctions d’agrégation, conditions, filtrage) pour produire des résultats fiables et précis.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Ce <b>graphique réalisé dans Excel</b> montre la synthèse des résultats issus de la requête précédente. Il affiche, pour chaque type d’œuvre (movie, short, tvEpisode, etc.), le <b>nombre total de votes</b> (barres oranges) et la <b>note moyenne</b> (points bleus).<br><br>
+                        Il permet une <b>lecture rapide et visuelle des tendances</b> : les <b>films (movie)</b> obtiennent le plus de votes, mais les <b>mini-séries (tvMiniSeries)</b> ou les <b>courts-métrages (short)</b> ont souvent de meilleures notes moyennes.<br><br>
+                        Ce graphique prouve que j’ai acquis la compétence <b>AC 11.01</b>, car il répond à une <b>demande spécifique du commanditaire</b> : <b>synthétiser des indicateurs dans un format visuel clair et exploitable</b>.
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>Access / SQL</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans cette SAÉ, je me suis retrouvé dans la posture d’un chargé d’analyse et de reporting. Mon rôle consistait à produire des requêtes et graphiques exploitables à partir d’une base de données relationnelle, en suivant un cahier des charges précis. J’ai dû faire face à des bases complexes, à des données volumineuses et à des jointures multiples, simulant une situation professionnelle réelle.</p>
+                        <p>J’ai mobilisé les ressources <i>tableur et reporting</i> (R1.01) pour la mise en forme des graphiques ainsi que les <i>bases de données relationnelles 1</i> (R1.02) pour la création des requêtes.</p>
+                        <p>J’ai rédigé des requêtes SQL pour extraire des données pertinentes afin de répondre aux demandes du cahier des charges, conçu des indicateurs de performance, organisé leur restitution dans un fichier Excel et documenté mon code SQL via Access.</p>
+                        <p>J’ai appris à interpréter un cahier des charges, à réaliser un reporting, à gérer les difficultés liées aux bases relationnelles (jointures, volumes, cohérence), et à adapter ma production aux besoins du commanditaire.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 11.01 |</span>Correctement interpréter et prendre en compte le besoin du commanditaire ou du client<br>
+                            <i>J’ai su identifier les attentes liées à l’analyse des données et à leur visualisation, en livrant des résultats clairs et pertinents (graphiques, indicateurs).</i><br><br>
+
+                            <span>— AC 11.02 |</span>Respecter les formalismes de notation<br>
+                            <i>J’ai structuré les requêtes SQL avec une présentation claire et lisible (alias, indentations, bonnes pratiques), afin de faciliter leur relecture.</i><br><br>
+
+                            <span>— AC 11.03 |</span>Connaître la syntaxe des langages et savoir l’utiliser<br>
+                            <i>J’ai rédigé des requêtes SQL en respectant la syntaxe, en utilisant des jointures, des fonctions d’agrégation et des conditions, afin de montrer ma maîtrise de ce langage.</i><br><br>
+
+                            <span>— AC 11.04 |</span>Mesurer l’importance de maîtriser la structure des données à exploiter<br>
+                            <i>J’ai analysé et utilisé le schéma relationnel pour comprendre comment les tables sont liées, ce qui m’a permis de produire des requêtes pertinentes et correctes.</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>

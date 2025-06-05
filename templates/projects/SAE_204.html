@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+    <title>Projets – SAÉ 2.04</title>
+</head>
+
+<body>
+    <nav>
+        <p>Jocelyn CHERUEL</p>
+        <div class="nav-links">
+            <a href="../../index.html">Accueil</a>
+            <a href="../projects.html" class="selected">Projets</a>
+            <a href="../about.html">À propos</a>
+        </div>
+        <button id="cv-link" title="Afficher mon CV">Mon CV</button>
+    </nav>
+      
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <a href="../../assets/cv_JocelynCheruel.pdf" download id="download-cv" title="Télécharger"><i class="fa fa-download"></i></a>
+            <i id="close" class="fa fa-xmark" title="Fermer"></i>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+    </div> 
+
+    <h1 class="page-title">SAÉ 2.04 – Datavisualisation</h1>
+
+    <div class="content">
+        <div class="work-infos">        
+            <div class="item">
+                <div class="preuve-wrapper">
+                    <div class="carousel">
+                        <i class="far fa-arrow-alt-circle-left" id="prev"></i>
+
+                        <div class="preuve active">
+                            <img src="../../assets/preuves/SAE_204/preuve_1.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_204/preuve_2.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_204/preuve_3.png">
+                        </div>
+                        
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_204/preuve_4.png">
+                        </div>
+
+                        <div class="preuve">
+                            <img src="../../assets/preuves/SAE_204/preuve_5.png">
+                        </div>
+
+                        <i class="far fa-arrow-alt-circle-right" id="next"></i>
+                    </div>
+
+                    <p class="preuve-commentaire active">
+                        Cette capture d’écran présente un <b>tableau détaillé</b> présentant la répartition des niveaux d’études des parents d’élèves par département, issu des données de l’INSEE. On y observe des colonnes telles que l’<b>IPS moyen</b> (Indice de Position Sociale), le <b>nombre de parents sans diplôme</b>, ainsi que la répartition des diplômes (Brevet, CAP-BEP, Bac et plus) et des indicateurs de proportion, que j'ai calculé.<br><br>
+                        Ce tableau est une étape essentielle puisqu'il est la base de notre analyse et nous a permis de réaliser le poster.<br><br>
+                        Cette preuve me permet d’acquérir les compétences suivantes : <b>AC 11.04</b>, car j’ai su <b>maîtriser la structure des données</b> en organisant correctement les informations nécessaires à l’analyse, et <b>AC 12.02</b>, car j’ai compris que <b>l’analyse correcte repose sur des données propres et préparées</b>.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran montre un <b>diagramme en secteurs</b> représentant la répartition du <b>niveau d’études des français</b> en deux catégories : « < BAC +2 » (66 %) et « >= BAC +2 » (34 %).<br><br>
+                        Ce graphique met en évidence la dominance de la catégorie « < BAC +2 » au sein de la population avec 66% qui se sont arrêtés avant un BAC +2, tout en illustrant la part minoritaire de la population ayant un niveau d’études supérieur ou égal à BAC +2.<br><br>
+                        Cette preuve valide la compétence <b>AC 12.03</b>, car elle montre que j’ai su utiliser une <b>représentation graphique simple et efficace</b> pour <b>décrire la distribution d’une variable statistique</b> (niveau d’études), afin de faciliter la compréhension et l’interprétation des données.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran présente un <b>nuage de points</b> montrant la relation entre l’<b>indice de position sociale (IPS)</b> et la <b>proportion d’étudiants en Bac+2 ou plus</b>. Chaque point correspond à un département, et l’on observe une tendance générale positive.<br><br>
+                        La présence du <b>coefficient de corrélation linéaire (0.8)</b> permet de mesurer la force de la liaison entre ces deux variables et de confirmer la tendance observée.<br><br>
+                        Cette preuve valide la compétence <b>AC 12.04</b>, car elle démontre que j’ai su <b>mettre en évidence graphiquement et numériquement la liaison entre deux variables</b>, afin de faciliter l’interprétation statistique et la compréhension des données.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran présente une <b>carte de France</b> combinant deux statistiques : la <b>valeur de l’indice de position sociale (IPS)</b> représentée par des teintes de bleu, et la <b>proportion d’étudiants en Bac+2 ou plus</b> indiquée par des cercles rouges de taille variable.<br><br>
+                        La superposition de ces deux indicateurs permet de comparer visuellement les niveaux d’éducation avec l’indice de position sociale.<br><br>
+                        Cette preuve valide la compétence <b>AC 12.04</b>, car elle montre que j’ai su <b>mettre en évidence la liaison potentielle entre deux variables</b> (IPS et proportion d’étudiants Bac+2 ou plus) à l’aide d’une représentation graphique pertinente.<br><br> Elle valide également la compétence <b>AC 13.05</b>, car j’ai compris l’importance de la <b>datavisualisation pour faciliter l’analyse des données</b> et rendre l’information plus accessible et plus lisible.
+                    </p>
+
+                    <p class="preuve-commentaire">
+                        Cette capture d’écran présente le <b>poster final</b> réalisé dans le cadre du Challenge DataViz 2025. Il synthétise les résultats de l’étude sur la reproduction sociale et le niveau d’études des jeunes en France en 2021, à partir des données de l’Insee.<br><br>
+                        Le poster contient plusieurs visuels (carte de France avec deux variables, camembert, diagramme de corrélation) et des textes explicatifs.<br><br>
+                        Cela prouve ainsi que j’ai compris l’importance de la <b>data visualisation et de l’infographie</b> pour rendre les résultats accessibles et pertinents (AC 13.05) et que j'ai su identifier et contextualiser les données. J’ai également présenté mon poster à l’oral, démontrant ainsi que je suis capable de <b>communiquer de manière précise et nuancée</b> les résultats de l’étude (AC 13.06). Enfin, ce poster valide la compétence <b>AC 11.01</b>, car j’ai su <b>répondre au besoin du commanditaire</b> (proposer un document clair, illustré et synthétique qui répond à la problématique posée).
+                    </p>
+                </div>
+                  
+                <div class="zoom-overlay" id="zoomOverlay">
+                    <i class="far fa-arrow-alt-circle-left" id="zoomPrev"></i>
+                    <img src="" id="zoomedImage">
+                    <i class="far fa-arrow-alt-circle-right" id="zoomNext"></i>
+                </div>        
+
+                <div class="details">
+                    <div class="item-info">
+                        <div class="year-badge">2025</div>
+                        <h4>R / Excel</h4>
+                    </div>
+
+                    <div class="item-texte">
+                        <p>Dans cette SAÉ, j’ai pris la posture d’un data visualizer. Mon objectif était de représenter visuellement les données issues de l'Insee, Institut national de la statistique et des études économiques, créé en 1946, afin de faire ressortir des éléments clés en répondant à une problématique posée.</p>
+                        <p>J’ai mobilisé les ressources <i>reporting et datavisualisation</i> (R2.01), <i>statistique descriptive 2</i> (R2.05) et <i>communication professionnelle</i> (R2.10) pour structurer les données, choisir les indicateurs pertinents et construire des représentations graphiques lisibles et cohérentes.</p>
+                        <p>J’ai sélectionné les données utiles à partir d’un jeu de données assez complexe, nettoyé et structuré l’information, puis conçu une série de visuels (cartes, nuage de points, diagrammes en secteurs). J’ai ensuite présenté mes résultats sous forme de poster.</p>
+                        <p>J’ai appris à contextualiser les données, à extraire l’essentiel sous forme visuelle, à évaluer la pertinence d’un graphique, et à communiquer des résultats de manière claire, précise et adaptée.</p>
+
+                        <p><b>Compétences développées :</b></p>
+                        <p class="competences">
+                            <span>— AC 11.01 |</span>Correctement interpréter et prendre en compte le besoin du commanditaire ou du client<br>
+                            <i>J’ai su répondre au besoin du Challenge DataViz en concevant un poster clair et pertinent à partir des données de l’Insee, en respectant les attentes du challenge.</i><br><br>
+
+                            <span>— AC 11.04 |</span>Mesurer l’importance de maîtriser la structure des données à exploiter<br>
+                            <i>J’ai organisé et structuré les données INSEE pour garantir leur bonne exploitation et faciliter les analyses statistiques et graphiques.</i><br><br>
+
+                            <span>— AC 12.02 |</span>Comprendre qu’une analyse correcte ne peut émaner que de données propres et préparées<br>
+                            <i>J’ai nettoyé et vérifié les données avant de réaliser les visuels pour assurer la fiabilité des résultats présentés.</i><br><br>
+
+                            <span>— AC 12.03 |</span>Comprendre l’intérêt des synthèses numériques et graphiques pour décrire une variable statistique<br>
+                            <i>J’ai conçu un visuel clair (diagramme en secteurs) afin de synthétiser l’information sur le niveau d’études (« < BAC +2 » et « >= BAC +2 »).</i><br><br>
+
+                            <span>— AC 12.04 |</span>Comprendre l’intérêt des synthèses numériques et graphiques pour mettre en évidence des liaisons entre variables<br>
+                            <i>J’ai réalisé un nuage de points et une carte pour montrer la corrélation entre l'IPS et la proportion de diplômés (« >= BAC +2 »).</i><br><br>
+
+                            <span>— AC 13.02 |</span>Identifier l’importance de contextualiser ses données<br>
+                            <i>J’ai travaillé à partir de données de l’Insee et pris soin de situer l’analyse dans le contexte français de la reproduction sociale et de l’accès aux études supérieures.</i><br><br>
+
+                            <span>— AC 13.05 |</span>Comprendre les intérêts de la data visualisation et de l’infographie<br>
+                            <i>J’ai choisi des graphiques pertinents pour rendre l’information accessible et visuelle, tout en facilitant l’interprétation des résultats.</i><br><br>
+
+                            <span>— AC 13.06 |</span>Mesurer l’importance d’une expression précise et nuancée dans la communication en français et dans une langue étrangère des résultats<br>
+                            <i>J’ai présenté le poster à l’oral en expliquant les résultats de manière claire, en montrant ma capacité à communiquer les données avec une certaine précision.</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jocelyn-cheruel-935150124/" target="_blank" title="Linkedin"><i class='fa-brands fa-linkedin'></i></a>
+            <a href="https://github.com/jocelyncheruel?tab=repositories" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Copyright ©2025, Tous droits réservés.</p>
+    </footer>  
+    
+    <script src="../../assets/script.js"></script>
+</body>
+
+</html>
